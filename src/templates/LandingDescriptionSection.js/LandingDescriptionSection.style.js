@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     width: 100%;
-    padding: 2vmax 0;
+    padding: 3vmax 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
     p{
         font-size: ${({theme}) => theme.fontSize.l};
-        line-height: 140%;
+        line-height: 150%;
         font-weight: 500;
         a{
             color: ${({theme}) => theme.colors.main};

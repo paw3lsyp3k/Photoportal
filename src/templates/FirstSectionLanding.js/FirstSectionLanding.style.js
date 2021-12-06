@@ -3,7 +3,7 @@ import background from "../../assets/img/background.jpg"
 
 export const Wrapper = styled.div`
     width: 100%;
-    height: 90vh;
+    height: 92vh;
     background-image: url(${background});
     background-position: bottom;
     background-size: cover;
