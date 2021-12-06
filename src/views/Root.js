@@ -4,6 +4,7 @@ import { theme } from '../assets/styles/theme';
 import FirstSectionLanding from '../templates/FirstSectionLanding.js/FirstSectionLanding';
 import LandingDescriptionSection from '../templates/LandingDescriptionSection.js/LandingDescriptionSection';
 import RecomendedSection from '../templates/RecomendedSection/RecomendedSection';
+import FaqSection from '../templates/FaqSection/FaqSection';
 
 const Root = () => {
     return (
@@ -11,6 +12,7 @@ const Root = () => {
             <FirstSectionLanding/>
             <LandingDescriptionSection />
             <RecomendedSection />
+            <FaqSection />
         </ThemeProvider>
     );
 };

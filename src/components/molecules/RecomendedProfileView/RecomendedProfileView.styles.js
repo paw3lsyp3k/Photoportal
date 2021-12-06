@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     padding: 2vmax 1vmax;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
