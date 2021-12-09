@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const Wrap = styled.div`
-    background-color: #C7C7C7;
+    background-color: #e3e3e3;
     padding: 0.75vmax 1vmax;
     display: flex;
     justify-content: space-between;

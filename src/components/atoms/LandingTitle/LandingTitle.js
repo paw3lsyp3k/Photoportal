@@ -19,5 +19,7 @@ export const LandingTitle = styled.div`
         margin-top: 3%;
         margin-bottom: -2vmax;
         width: 70%;
+        font-weight: 500;
+        line-height: 150%;
     }
 `;
