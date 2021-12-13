@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import FormField from '../../molecules/FormField/FormField';
-import { Wrapper } from './LoginSection.styles';
+import { Wrapper } from '../LoginSection/LoginSection.styles';
 import { Button } from '../../atoms/FormButton/FormButton';
 
-const LoginSection = () => {
+const RegistrationSection = () => {
 
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
+    const[phone, setphone] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const user = {email, password};
+        const user = {email, phone, password};
 
         console.log(user)
     }
@@ -19,13 +20,14 @@ const LoginSection = () => {
         <Wrapper>
             
             <form onSubmit={handleSubmit}>
-                <h1>Zaloguj się</h1>
+                <h1>Zarejestruj się</h1>
                 <FormField label="E-mail" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <FormField label="Telefon" id="phone" name="phone" value={phone} onChange={(e) =>  setphone(e.target.value)}/>
                 <FormField label="Hasło" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <Button>Zaloguj się</Button>
+                <Button>Zarejestruj się</Button>
             </form>
         </Wrapper>
     )
 }
 
-export default LoginSection;
+export default RegistrationSection;

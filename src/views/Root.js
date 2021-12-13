@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../assets/styles/theme';
 import Landingpage from './Landingpage';
 import UserLogin from './UserLogin';
+import UserRegistration from './UserRegistration';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const Root = () => {
@@ -15,6 +16,9 @@ const Root = () => {
                     }/>
                     <Route path="/login" element={
                         <UserLogin />
+                    }/>
+                    <Route path="/register" element={
+                        <UserRegistration />
                     }/>
                 </Routes>
             </ThemeProvider>
