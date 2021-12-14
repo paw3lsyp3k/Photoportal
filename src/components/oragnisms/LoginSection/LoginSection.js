@@ -5,14 +5,23 @@ import { Button } from '../../atoms/FormButton/FormButton';
 
 const LoginSection = () => {
 
-    const[email, setEmail] = useState('');
-    const[password, setPassword] = useState('');
+    const[formValues, setFormValues] = useState({
+        email: '',
+        password: '',
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const user = {email, password};
+        const user = {...formValues};
 
         console.log(user)
+    }
+
+    const handleInputCHange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name] : e.target.value,
+        })
     }
 
     return(
@@ -20,8 +29,8 @@ const LoginSection = () => {
             
             <form onSubmit={handleSubmit}>
                 <h1>Zaloguj się</h1>
-                <FormField label="E-mail" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <FormField label="Hasło" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <FormField label="E-mail" id="email" name="email" value={formValues.email} onChange={handleInputCHange}/>
+                <FormField label="Hasło" type="password" id="password" name="password" value={formValues.password} onChange={handleInputCHange}/>
                 <Button>Zaloguj się</Button>
             </form>
         </Wrapper>

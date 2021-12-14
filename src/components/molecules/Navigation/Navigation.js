@@ -1,16 +1,13 @@
-import React from 'react'
-import { RegisterButton } from '../../atoms/RegisterButton/RegisterButton'
-import { LoginButton } from '../../atoms/LoginButton/LoginButton'
-import { Wrapper } from './Navigation.styles'
-import { MenuSeparator } from '../../atoms/MenuSeparator/MenuSeparator'
-import { StyledLink } from '../../oragnisms/NavigationBar/NavigationBar.styles'
-
+import React from 'react';
+import { Wrapper } from './Navigation.styles';
+import { MenuSeparator } from './Navigation.styles';
+import { StyledLink } from './Navigation.styles';
 const Navigation = () => {
     return (
         <Wrapper>
-            <RegisterButton><StyledLink to="/register">Rejestracja</StyledLink></RegisterButton>
-            <MenuSeparator/>
-            <LoginButton><StyledLink to="/login">Login</StyledLink></LoginButton>
+            <StyledLink activeClassName="active-link" to="/register">Rejestracja</StyledLink>
+            <MenuSeparator />
+           <StyledLink activeClassName="active-link" to="/login">Login</StyledLink>
         </Wrapper>
     )
 }

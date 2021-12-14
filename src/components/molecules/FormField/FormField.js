@@ -7,9 +7,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 1vmax 0;
+  margin: 0 0 15px 0;
   ${Label} {
-    margin: 10px 0;
+    margin:5px 0;
   }
 `;
 

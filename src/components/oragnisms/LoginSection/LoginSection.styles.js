@@ -24,6 +24,6 @@ export const Wrapper = styled.div`
         font-weight: 500;
         font-size: ${({theme}) => theme.fontSize.m};
         text-align: center;
-        margin-bottom: 3vmax;
+        margin-bottom: 2vmax;
     }
 `;

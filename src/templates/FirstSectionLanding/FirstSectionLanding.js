@@ -1,8 +1,8 @@
 import React from 'react';
 import { Wrapper, WrapperDecoration } from './FirstSectionLanding.style';
 import NavigationBar from '../../components/oragnisms/NavigationBar/NavigationBar';
-import { LandingTitle } from '../../components/atoms/LandingTitle/LandingTitle';
 import LandingSearchSection from '../../components/molecules/LandingSearchSection/LandingSearchSection';
+import { LandingTitle } from './FirstSectionLanding.style';
 
 const FirstSectionLanding = () => {
     return(

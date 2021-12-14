@@ -3,17 +3,34 @@ import FormField from '../../molecules/FormField/FormField';
 import { Wrapper } from '../LoginSection/LoginSection.styles';
 import { Button } from '../../atoms/FormButton/FormButton';
 
+const initialFormState = {
+    email: '',
+    phone: '',
+    password: '',
+    rpassword: '',
+}
+
 const RegistrationSection = () => {
 
-    const[email, setEmail] = useState('');
-    const[password, setPassword] = useState('');
-    const[phone, setphone] = useState('');
+    const[formValues, setFormValues] = useState(initialFormState);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const user = {email, phone, password};
+        const newUser = {...formValues,
+        email: formValues.email,
+        phone: formValues.phone,
+        password: formValues.password,
+        rpassword: formValues.rpassword,
+        }
+        console.log(newUser)
+        setFormValues(initialFormState)
+    }
 
-        console.log(user)
+    const handleInputChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name] : e.target.value,
+        })
     }
 
     return(
@@ -21,9 +38,10 @@ const RegistrationSection = () => {
             
             <form onSubmit={handleSubmit}>
                 <h1>Zarejestruj się</h1>
-                <FormField label="E-mail" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <FormField label="Telefon" id="phone" name="phone" value={phone} onChange={(e) =>  setphone(e.target.value)}/>
-                <FormField label="Hasło" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <FormField label="E-mail" type="text" id="email" name="email" value={formValues.email} onChange={handleInputChange}/>
+                <FormField label="Telefon" type="number" id="phone" name="phone" value={formValues.phone} onChange={handleInputChange}/>
+                <FormField label="Hasło" type="password" id="password" name="password" value={formValues.password} onChange={handleInputChange}/>
+                <FormField label="Powtórz Hasło" type="password" id="rpassword" name="rpassword" value={formValues.rpassword} onChange={handleInputChange}/>
                 <Button>Zarejestruj się</Button>
             </form>
         </Wrapper>

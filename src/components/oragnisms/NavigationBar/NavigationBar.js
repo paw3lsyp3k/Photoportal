@@ -1,8 +1,7 @@
 import React from 'react';
 import { Wrapper } from './NavigationBar.styles';
-import {Logo} from '../../atoms/Logo/Logo';
 import Navigation from '../../molecules/Navigation/Navigation';
-import { StyledLink } from './NavigationBar.styles';
+import { StyledLink, Logo } from './NavigationBar.styles';
 
 
 const NavigationBar = () => {
